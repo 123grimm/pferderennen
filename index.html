@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pferderennen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <h1>Pferderennen</h1>
+      <div class="controls">
+        <button id="startButton" class="start-button" type="button">Rennen starten</button>
+      </div>
+    </header>
+
+    <section class="track-panel" aria-label="Rennstrecke">
+      <div class="track-header">
+        <span>Start</span>
+        <span>Ziel</span>
+      </div>
+      <div id="track" class="track"></div>
+      <div class="finish-line" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <div id="winnerBanner" class="winner-banner hidden" aria-live="polite">Gewinner: -</div>
+
+  <template id="laneTemplate">
+    <div class="lane">
+      <div class="lane-label"></div>
+      <div class="lane-track">
+        <div class="racer">
+          <span class="racer-horse" aria-hidden="true">🐎</span>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
